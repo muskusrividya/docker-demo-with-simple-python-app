@@ -1,12 +1,6 @@
 pipeline {
     agent { label 'master' }
     stages {
-        stage('compile') {
-            agent { label 'dev' }
-            steps {
-                sh 'mvn clean install'
-            }
-        }
         stage('build') {
             agent { label 'dev' }
             steps {
